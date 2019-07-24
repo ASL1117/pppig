@@ -1,0 +1,16 @@
+server:
+  port: 9091
+spring:
+  application:
+    name: pppig-manager
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6868/eureka/‘
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    pppig-mgtt:
+      path: /mgtt/**
+      serviceId: pppig-mgtt

@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="" style="min-height: 628px;"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>自动投标管理</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="AutoLoan/bootstrap.css">
+    <link rel="stylesheet" href="AutoLoan/font-awesome.css">
+    <link rel="stylesheet" href="AutoLoan/ionicons.css">
+    <!-- 插件css -->
+    <link rel="stylesheet" href="AutoLoan/blue.css"><link rel="stylesheet" href="AutoLoan/AdminLTE.css">
+    <link rel="stylesheet" href="AutoLoan/app.css">
+    <!-- 页面css -->
+    <style type="text/css">
+    </style><!--[if lt IE 9]>
+    <script src="/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="/libs/respondjs/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <link href="AutoLoan/WdatePicker.css" rel="stylesheet" type="text/css"></head>
+  <body class="skin-blue  pace-done" style="min-height: 628px;"><div class="pace  pace-inactive"><div class="pace-progress" style="width: 100%;" data-progress-text="100%" data-progress="99">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div>
+    <header class="header">
+      <a href="http://mgtt.pangpangpig.com/admin/index.action" class="logo"><img src="AutoLoan/logo.png"></a>
+      <nav class="navbar navbar-static-top" role="navigation">
+        <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+          <img src="AutoLoan/caiduan.png" style="display: b">
+        </a>
+        <div class="navbar-right">
+          <ul class="nav navbar-nav">
+            <li class="dropdown user user-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- <i class="glyphicon glyphicon-user"></i> -->
+                <img src="AutoLoan/touxiang.png" class="img-circle" alt="User Image">
+                <span class="guHuanspsd">欢迎您 , admin</span>
+              </a>
+            </li>
+            <li class="guTiaoertd"><span></span></li>
+            <li>
+              <div class="pull-right" style="margin-left: 10px;">
+                <a href="http://mgtt.pangpangpig.com/admin/logout.action" class="guBtned1 btn-default btn-flat" id="dengchu">退出</a>
+                <input type="hidden" value="1" id="tempId">
+              </div>
+            </li>
+            <li class="guTiaoertd"><span></span></li>
+            <li>
+              <div class="pull-right">
+                <a href="http://mgtt.pangpangpig.com/admin/showupdatePassword.action" class="guBtned2 btn-default btn-flat">修改密码</a>
+              </div>
+            </li>
+              </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left" style="min-height: 628px;">
+      <aside class="left-side sidebar-offcanvas" style="min-height: 628px;">
+        <section class="sidebar">
+          <!-- <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search..."/>
+              <span class="input-group-btn">
+                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form> -->
+          <ul class="sidebar-menu">
+            <!-- 树形菜单 -->
+			<!-- 首页 -->
+<li class="guXiaofange1">
+<a href="http://mgtt.pangpangpig.com/admin/index.action">
+<i class="fa fa-1"></i>
+<span>首页</span>
+</a>
+
+</li>
+<!-- 借贷管理 -->
+<li class="treeview active guXiaofange2">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>借贷管理</span>
+<i class="fa pull-right fa-angle-down"></i>
+</a>
+
+<ul class="treeview-menu" style="display: block;">
+  <!-- 借款综合查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/loanSerch.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>借款综合查询</span>
+    </a>
+
+    </li>
+<!-- 借款申请管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/loanQuery1.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>借款申请管理</span>
+    </a>
+
+    </li>
+<!-- 借款标管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/loanQuery8.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>借款标管理</span>
+    </a>
+
+    </li>
+<!-- 债权转让管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/getCreditRightByParam.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>债权转让管理</span>
+    </a>
+
+    </li>
+<!-- 自动投标 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/autoInvestor.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>自动投标</span>
+    </a>
+
+    </li>
+<!-- 逾期借款管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/getOverDue.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>逾期借款管理</span>
+    </a>
+
+    </li>
+<!-- 企业借款申请列表 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/financeapply.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>企业借款申请列表</span>
+    </a>
+
+    </li>
+<!-- 还款债权结束管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/getLoans.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>还款债权结束管理</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 审核 -->
+<li class="treeview guXiaofange3">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>审核</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 初审 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/query1stVerify.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>初审</span>
+    </a>
+
+    </li>
+<!-- 复审 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/query2ndVerifyNew.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>复审</span>
+    </a>
+
+    </li>
+<!-- 受托支付申请 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/notTrusteePayApply.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>受托支付申请</span>
+    </a>
+
+    </li>
+<!-- 担保账户提现审核 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/quaryWaitingAssureAuditPage.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>担保账户提现审核</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 资金管理 -->
+<li class="treeview guXiaofange4">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>资金管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 充值管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/rechargeLogListNew.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>充值管理</span>
+    </a>
+
+    </li>
+<!-- 提现管理(第三方) -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/queryCashWithdrawRequestPageNew2.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>提现管理(第三方)</span>
+    </a>
+
+    </li>
+<!-- 放款管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/releaseMoneyListNew.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>放款管理</span>
+    </a>
+
+    </li>
+<!-- 还款管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/repaymentLogListNew.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>还款管理</span>
+    </a>
+
+    </li>
+<!-- 平台资金对账 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/findPlatformFundNew.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>平台资金对账</span>
+    </a>
+
+    </li>
+<!-- 流水管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/moneyRecordListNew.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>流水管理</span>
+    </a>
+
+    </li>
+<!-- 还款第三方查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/startRepayment.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>还款第三方查询</span>
+    </a>
+
+    </li>
+<!-- 充值对帐查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/saveduizhang.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>充值对帐查询</span>
+    </a>
+
+    </li>
+<!-- 提现对帐查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/cashduizhang.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>提现对帐查询</span>
+    </a>
+
+    </li>
+<!-- 解冻资金 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/jiedong.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>解冻资金</span>
+    </a>
+
+    </li>
+<!-- 推荐奖励管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/invitionReward.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>推荐奖励管理</span>
+    </a>
+
+    </li>
+<!-- 用户资金管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/userCashManager.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>用户资金管理</span>
+    </a>
+
+    </li>
+<!-- 资金总账 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/moneyRecord.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>资金总账</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 产品管理 -->
+<li class="treeview guXiaofange5">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>产品管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 借款产品 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/borrowProductAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>借款产品</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 用户管理 -->
+<li class="treeview guXiaofange6">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>用户管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 个人借款用户 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/personalLoanList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>个人借款用户</span>
+    </a>
+
+    </li>
+<!-- 企业借款用户 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/BizLoanAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>企业借款用户</span>
+    </a>
+
+    </li>
+<!-- 投资用户 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/investmentList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>投资用户</span>
+    </a>
+
+    </li>
+<!-- 用户取现管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/takeCash.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>用户取现管理</span>
+    </a>
+
+    </li>
+<!-- 易保全录入 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/#" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>易保全录入</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 担保机构 -->
+<li class="treeview guXiaofange13">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>担保机构</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 个人担保 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assurePersonal.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>个人担保</span>
+    </a>
+
+    </li>
+<!-- 担保公司 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assureOrganizationList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>担保公司</span>
+    </a>
+
+    </li>
+<!-- 标的担保账户修改 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/showModifyBailAccountPage.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>标的担保账户修改</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 网站管理 -->
+<li class="treeview guXiaofange7">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>网站管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 关于我们 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goAboutUsList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>关于我们</span>
+    </a>
+
+    </li>
+<!-- 安全保障 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goExpertAdvisorList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>安全保障</span>
+    </a>
+
+    </li>
+<!-- 公司公告 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goCompanyNoticeList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>公司公告</span>
+    </a>
+
+    </li>
+<!-- 行业资讯 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goIndustryNewsList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>行业资讯</span>
+    </a>
+
+    </li>
+<!-- 合作伙伴 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goPartnerList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>合作伙伴</span>
+    </a>
+
+    </li>
+<!-- 合作伙伴(首页) -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/copeerAdmin.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>合作伙伴(首页)</span>
+    </a>
+
+    </li>
+<!-- 首页Banner -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goBanners.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>首页Banner</span>
+    </a>
+
+    </li>
+<!-- 产品列表 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goProductsList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>产品列表</span>
+    </a>
+
+    </li>
+<!-- 新Banner管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goNewBanners.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>新Banner管理</span>
+    </a>
+
+    </li>
+<!-- 理财学院 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goMoneySchoolList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>理财学院</span>
+    </a>
+
+    </li>
+<!-- 客户反馈01 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goUserFeedbackList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>客户反馈01</span>
+    </a>
+
+    </li>
+<!-- 媒体报道 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goMediasList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>媒体报道</span>
+    </a>
+
+    </li>
+<!-- 帮助中心 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goHelpCenterList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>帮助中心</span>
+    </a>
+
+    </li>
+<!-- 管理团队 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goManagerList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>管理团队</span>
+    </a>
+
+    </li>
+<!-- 活动页管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goHuoDongList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>活动页管理</span>
+    </a>
+
+    </li>
+<!-- 留言管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/listMessage1.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>留言管理</span>
+    </a>
+
+    </li>
+<!-- 首页LOGO -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goChangeLogo.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>首页LOGO</span>
+    </a>
+
+    </li>
+<!-- 联系我们 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goContactUsList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>联系我们</span>
+    </a>
+
+    </li>
+<!-- 招贤纳士 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goTalentsList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>招贤纳士</span>
+    </a>
+
+    </li>
+<!-- app图片管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goAppPicManageList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>app图片管理</span>
+    </a>
+
+    </li>
+<!-- 投资教学 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goInvestmentTeachingList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>投资教学</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 数据统计 -->
+<li class="treeview guXiaofange8">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>数据统计</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 按日用户统计 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/userStatisticByDayAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>按日用户统计</span>
+    </a>
+
+    </li>
+<!-- 按月用户统计 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/userStatisticByMonthAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>按月用户统计</span>
+    </a>
+
+    </li>
+<!-- 渠道统计 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/channelStatistics.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>渠道统计</span>
+    </a>
+
+    </li>
+<!-- 数据统计 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/dataStatistics.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>数据统计</span>
+    </a>
+
+    </li>
+<!-- 经营数据填报表 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/toOperationData.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>经营数据填报表</span>
+    </a>
+
+    </li>
+<!-- 首投有礼 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/tgDaliyAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>首投有礼</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 活动管理 -->
+<li class="treeview guXiaofange9">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>活动管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 活动配置 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/toActivityManage.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>活动配置</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 积分商城管理 -->
+<li class="treeview guXiaofange15">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>积分商城管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 积分参数查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/QueryScoreStatisticAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>积分参数查询</span>
+    </a>
+
+    </li>
+<!-- 用户积分查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/QueryUserScoreStatisticAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>用户积分查询</span>
+    </a>
+
+    </li>
+<!-- 积分兑换 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/ScoreStatisticAction.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>积分兑换</span>
+    </a>
+
+    </li>
+<!-- 商品订单管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goodsOrderList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>商品订单管理</span>
+    </a>
+
+    </li>
+<!-- 商品类别管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goodType.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>商品类别管理</span>
+    </a>
+
+    </li>
+<!-- 商品管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/goodList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>商品管理</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 系统管理 -->
+<li class="treeview guXiaofange10">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>系统管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 部门管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/departmentView.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>部门管理</span>
+    </a>
+
+    </li>
+<!-- 角色权限管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/roleList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>角色权限管理</span>
+    </a>
+
+    </li>
+<!-- 用户管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/listStaff.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>用户管理</span>
+    </a>
+
+    </li>
+<!-- 审计管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/toSecurityAudit.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>审计管理</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 参数设置 -->
+<li class="treeview guXiaofange12">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>参数设置</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 积分参数 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/ScoreConf.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>积分参数</span>
+    </a>
+
+    </li>
+<!-- 债权参数 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/showbond.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>债权参数</span>
+    </a>
+
+    </li>
+<!-- 个人标参数 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/showloanParam.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>个人标参数</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 猪友代码 -->
+<li class="guXiaofange14">
+<a href="http://mgtt.pangpangpig.com/admin/companycode/querycomanycode.action">
+<i class="fa fa-1"></i>
+<span>猪友代码</span>
+</a>
+
+</li>
+<!-- 转账管理 -->
+<li class="treeview guXiaofange11">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>转账管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 批量转账 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/transferMass.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>批量转账</span>
+    </a>
+
+    </li>
+<!-- 转账明细 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/transferDetail.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>转账明细</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 红包管理 -->
+<li class="treeview guXiaofange4">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>红包管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 活动管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/activesCoupon.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>活动管理</span>
+    </a>
+
+    </li>
+<!-- 注册投资红包 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/registerCashCoupon.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>注册投资红包</span>
+    </a>
+
+    </li>
+<!-- 注册加息券 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/raiseRatesCoupon.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>注册加息券</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 体验金 -->
+<li class="treeview">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>体验金</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 体验金发标 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/findExperienceLoan.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>体验金发标</span>
+    </a>
+
+    </li>
+<!-- 体验金管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/experienceManageLoan.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>体验金管理</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+<!-- 新资产管理 -->
+<li class="treeview">
+<a href="#">
+<i class="fa fa-1"></i>
+<span>新资产管理</span>
+<i class="fa fa-angle-left pull-right"></i>
+</a>
+
+<ul class="treeview-menu">
+  <!-- 资产方管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assetSideInfoList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>资产方管理</span>
+    </a>
+
+    </li>
+<!-- 新资产进件综合查询 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assetSearchManagement.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>新资产进件综合查询</span>
+    </a>
+
+    </li>
+<!-- 资产初审管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assetFirstTrial.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>资产初审管理</span>
+    </a>
+
+    </li>
+<!-- 资产复审管理 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assetSecondTrial.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>资产复审管理</span>
+    </a>
+
+    </li>
+<!-- 资产包操作 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/toCreateAssetsPack.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>资产包操作</span>
+    </a>
+
+    </li>
+<!-- 资产包列表 -->
+    <li>
+    <a href="http://mgtt.pangpangpig.com/admin/assetsPackList.action" style="margin-left: 0px;">
+    <i class="fa fa-1 guMenuseist"></i>
+    <span>资产包列表</span>
+    </a>
+
+    </li>
+</ul>
+</li>
+</ul>
+        </section>
+      </aside>
+      <aside class="right-side">
+<section class="content-header">
+          <!-- 内容头 -->
+          <h1>自动投标管理<small></small></h1>
+          <ol class="breadcrumb">
+            <li><i class="fa fa-dashboard"></i> 自动投标管理</li>
+            <li><i class="fa fa-dashboard"></i> 借贷管理</li>
+            <li><a href="http://mgtt.pangpangpig.com/admin/index.action">首页</a></li>
+          </ol></section>
+<section class="content">
+          <!-- 内容体 -->
+          <div class="row">
+              <div class="col-md-12">
+                <div class="box box-primary">
+                  <div class="box-body">
+                        <div class="row">
+                          <div class="col-md-8">
+                            <h4>当前自动投标状态：<span id="autoStatus">关闭中</span></h4>
+                          </div>
+                          <div class="col-md-4">
+                            <button class="btn btn-success" id="start" onclick="startInvest(1,this)">开启自动投标</button>
+                            <button class="btn btn-danger" id="shutdown" onclick="startInvest(2,this)">关闭自动投标</button>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div></section>
+</aside>
+    </div>
+    <!-- 基础js -->
+    <script src="AutoLoan/handlebars.js"></script>
+    <script src="AutoLoan/WdatePicker.js"></script>
+    <script src="AutoLoan/jquery.js"></script>
+    <script src="AutoLoan/jquery-ui-1.js"></script>
+    <script src="AutoLoan/bootstrap.js"></script>
+    <script src="AutoLoan/app_002.js"></script>
+    <!-- jquery.validation 验证框架 -->
+        <link rel="stylesheet" href="AutoLoan/form.css">
+    <script type="text/javascript" src="AutoLoan/jquery_004.js"></script>
+    <script type="text/javascript" src="AutoLoan/jquery_006.js"></script>
+    <script type="text/javascript" src="AutoLoan/jquery_005.js"></script>
+    <!-- 插件js -->
+    <script src="AutoLoan/icheck.js"></script>
+    <script src="AutoLoan/jquery_003.js"></script>
+    <script src="AutoLoan/jquery_002.js"></script><script>
+    var app = {
+      base: '', 
+      version: '1.0', 
+      loginName: 'admin', 
+      displayPages: 10,
+      termUnit:{"1":"天","3":"月" },
+      products:["按月付息，到期还本", "一次性还本付息", "等额本息"]
+    };
+    </script>
+    <script src="AutoLoan/app.js"></script>
+    <!-- 页面js -->
+    <script>
+  
+    +function($, app) { "use strict";
+      if( !app ) {
+        return;
+      }
+      
+      app.buildPage = function( data ) {
+        var page = {}, start, end;
+        page.size = data.pageSize;
+        page.content = data.voList;
+        if ( data.currentPage ) {
+          page.number = data.currentPage - 1;
+          page.totalPages = data.pageCount;
+          page.firstPage = (data.currentPage == 1);
+          page.lastPage = (data.currentPage == data.pageCount);
+        } else {
+          page.number = 0;
+          page.totalPages = 0;
+          page.firstPage = true;
+          page.lastPage = true;
+        }
+
+        return page;
+      };
+
+    }(window.jQuery, window.app);
+  </script>
+    <script>
+   function startInvest(index,obj) {
+		if(confirm("你确定要" + obj.value  + "自动投标功能?")) {
+			$.get("/admin/changeAutoInvestorStatus.action",{action:index},function(data) {
+				if(data==1) {
+					$("#autoStatus").html("已开启");
+				}else if(data==2) {
+					$("#autoStatus").html("已关闭");
+				}else {
+					alert("操作失败");
+				}
+			},"text");
+		}
+	}
+    </script><script type="text/javascript">
+	$(function(){
+		$(".treeview-menu li a").css("margin-left","0");
+		$(".treeview-menu li a i").addClass("guMenuseist");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(0)").addClass("guXiaofange1");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(1)").addClass("guXiaofange2");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(2)").addClass("guXiaofange3");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(3)").addClass("guXiaofange4");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(4)").addClass("guXiaofange5");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(5)").addClass("guXiaofange6");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(7)").addClass("guXiaofange7");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(8)").addClass("guXiaofange8");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(9)").addClass("guXiaofange9");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(11)").addClass("guXiaofange10");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(14)").addClass("guXiaofange11");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(12)").addClass("guXiaofange12");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(6)").addClass("guXiaofange13");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(13)").addClass("guXiaofange14");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(10)").addClass("guXiaofange15");
+		$(".skin-blue .sidebar>.sidebar-menu>li:eq(15)").addClass("guXiaofange4");
+	
+		$(".sidebar .sidebar-menu .treeview-menu li a").click(function(){
+			$(this).addClass("guCertaddsey");
+		});
+		
+	});
+	</script>
+	<script type="text/javascript">
+	$("#dengchu").click(function(){
+		var id = $("#tempId").val();
+			$.ajax({
+				url : '/admin/addLogout.action',
+				data:{
+					staffId : id
+				},
+				type : "post",
+				success : function(data) {
+				}
+			});
+		});
+	</script>
+  
+<div style="padding: 10px; position: fixed; top: 130px; right: -200px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 3px solid rgba(0, 0, 0, 0.7); width: 200px; z-index: 999999;" class="no-print"><h4 style="margin: 0 0 5px 0; border-bottom: 1px dashed #ddd; padding-bottom: 3px;">Layout Options</h4><div class="form-group no-margin"><div class=".checkbox"><label><input type="checkbox" onchange="change_layout();"> Fixed layout</label></div></div><h4 style="margin: 0 0 5px 0; border-bottom: 1px dashed #ddd; padding-bottom: 3px;">Skins</h4><div class="form-group no-margin"><div class=".radio"><label><input name="skins" type="radio" onchange='change_skin("skin-black");'> Black</label></div></div><div class="form-group no-margin"><div class=".radio"><label><input name="skins" type="radio" onchange='change_skin("skin-blue");' checked="checked"> Blue</label></div></div></div></body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Sabo</title>
+</head>
+<script src="webjars/jquery/2.2.4/jquery.js"></script>
+<script>
+    $(function () {
+        $("#a").submit();
+    })
+</script>
+<body>
+    <form action="/sabo" method="post" id="a">
+        <table>
+            <tr>
+                <td>
+                    <label>
+                        <input type="text" name="a" readonly="readonly" th:field="${ice.a}">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="text" name="b" readonly="readonly" th:field="${ice.b}">
+                    </label>
+                </td>
+                <td>
+                    <label>
+                        <input type="text" name="c" value="3" readonly="readonly">
+                    </label>
+                </td>
+                <td>
+                    <input type="submit" value="啊">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
